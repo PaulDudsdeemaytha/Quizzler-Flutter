@@ -25,6 +25,18 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
+  //<Icon> Means that we are announcing that the List is containing only Icon widgets
+  List<Icon> scoreKeeper = [
+    Icon(
+      Icons.check,
+      color: Colors.green,
+    ),
+    Icon(
+      Icons.close,
+      color: Colors.red,
+    )
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -84,6 +96,9 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
         ),
+        Row(
+          children: scoreKeeper,
+        )
         //TODO: Add a Row here as your score keeper
       ],
     );
